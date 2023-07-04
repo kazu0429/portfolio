@@ -11,7 +11,7 @@ const Header = () => {
         {name:"Home", to:"/"},
         {name:"Products", to:"/Products"},
         {name:"Blogs", to:"/Blogs"},
-        {name:"About", to:"/About"},
+        {name:"Contact", to:"/Contect"},
     ]
 
     return (
@@ -37,7 +37,7 @@ const Header = () => {
                         <ul className={`flex flex-col lg:flex-row lg:space-x-8 sm:mt-0 shadow-black mt-4 font-medium`}>
                             {Menus.map((menu, i) => (
                                 <li key={i}>
-                                    <Link href={menu.to} className="block py-2 pr-4 pl-3 hover:text-indigo-500 border-100 lg:border-0 lg:p-0 ">{menu.name}</Link>
+                                    <Link href={menu.to} className="block py-2 pr-4 pl-3 hover:text-indigo-500 border-100 lg:border-0 lg:p-0">{menu.name}</Link>
                                 </li>
                             ))}
                         </ul>
