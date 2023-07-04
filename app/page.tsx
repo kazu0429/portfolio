@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className='m-4 w-screen h-auto flex justify-center'>
       <div className='m-2 lg:flex lg:flex-row sm:flex sm:flex-col justify-center gap-x-8 sm:gap-y-4'>
-        <div className='p-3 lg:w-1/3 sm:w-3/5 flex flex-col border-gray-800 bg-gray-100 gap-y-2'>
+        <div className='py-4 px-3 lg:w-1/3 sm:w-3/5 flex flex-col border-gray-800 bg-gray-100 gap-y-2'>
           <div className='m-4 flex justify-center'>
             <Image src="/image/icon.png" height={400} width={400} alt='profile' />
           </div>
@@ -17,8 +17,8 @@ export default function Home() {
             <div className='text-gray-500'>Kagoshima Univ.</div>
           </div>
           <div className='text-gray-500 flex flex-row flex-wrap'>
-            私が鹿児島大学工学部に所属する大学3年生です。プログラミング研究に属しており、主にWeb開発についての学習してます。<br />
-            このポートフォリをサイトでは、私のこれまでプロダクト開発やブログ記事の一覧を掲載しています。
+            鹿児島大学工学部に所属する大学3年生です。プログラミング研究に属しており、主にWeb開発について学習してます。<br />
+            このポートフォリオサイトでは、私のこれまでプロダクト開発やブログ記事の一覧を掲載しています。
           </div>
           <div className='flex flex-row gap-x-2 text-black'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -28,7 +28,7 @@ export default function Home() {
               Kagoshima
             </div>
           </div>
-          <div className='flex flex-row gap-x-2 text-black'>
+          <div className='pb-2 flex flex-row gap-x-2 text-black'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
             </svg>
