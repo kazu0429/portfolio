@@ -9,9 +9,9 @@ const Header = () => {
 
     const Menus = [
         {name:"Home", to:"/"},
-        {name:"Products", to:"/Products"},
-        {name:"Blogs", to:"/Blogs"},
-        {name:"Contact", to:"/Contect"},
+        {name:"Products", to:"/products"},
+        {name:"Blogs", to:"/blogs"},
+        {name:"Contact", to:"/contect"},
     ]
 
     return (
