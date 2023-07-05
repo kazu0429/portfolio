@@ -18,8 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="h-screen w-screen bg-white text-black">
-        <div>
-          <Header/>{children}<Footer/>
+        <div className='flex flex-col justufy-between'>
+          <Header/>
+            <div>
+              {children}
+            </div>
+          <Footer/>
         </div>
       </body>
     </html>
