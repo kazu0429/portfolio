@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className='m-4 w-screen h-auto flex justify-center'>
-      <div className='m-2 lg:flex lg:flex-row sm:flex sm:flex-col justify-center gap-x-8 sm:gap-y-4'>
-        <div className='py-4 px-3 lg:w-1/3 sm:w-3/5 flex flex-col border-gray-800 bg-gray-100 gap-y-2'>
+    <div className='m-5 h-auto justify-center items-center'>
+      <div className='m-2 lg:flex lg:flex-row md:flex md:flex-row sm:flex sm:flex-col lg:justify-center items-center gap-x-12 sm:gap-y-4'>
+        <div className='py-4 px-3 lg:w-1/3 md:w-2/4 sm:w-3/5 flex flex-col border-gray-800 bg-gray-100 gap-y-3'>
           <div className='m-4 flex justify-center'>
             <Image src="/image/icon.png" height={400} width={400} alt='profile' />
           </div>
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='mt-6 flex flex-col lg:w-1/3 sm:w-3/5 gap-y-5'>
+        <div className='mt-6 flex flex-col lg:w-1/3 md:w-2/4 sm:w-3/5 gap-y-5'>
           <div className='mt-8 font-bold text-4xl'>PORTFOLIO</div>
           <div className='text-2xl'>
             Skills
