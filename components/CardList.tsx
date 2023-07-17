@@ -23,7 +23,7 @@ const CardList = (props: Props) => {
                 <div className="flex justify-arounded mx-4 grid gap-4 sm:grid-cols-2 md:gap-6 md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
                     {products?.map((product) => (
                         <div key={product.id} className="flex flex-col items-center overflow-hidden rounded-lg border bg-white">
-                            <a href="#" className="group relative block overflow-hidden bg-gray-100 w-52 h-48">
+                            <a href="#" className="group relative block overflow-hidden bg-gray-100 w-56 h-48">
                                 <img src={product.images.url} loading="lazy" alt={product.images.name} className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>
                             <div className="flex flex-1 flex-col p-4 sm:p-6 lg:p-4 flex-wrap">
