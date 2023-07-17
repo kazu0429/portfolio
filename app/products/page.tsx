@@ -1,9 +1,9 @@
 'use client'
 import CardList from '@/components/CardList';
-import { getProducts } from '@/utils/supabaseFunction'
+import { getProducts } from '@/lib/supabaseFunction'
 import React, { useEffect, useState } from 'react'
 
-const Products = () => {
+const Products = async() => {
 
     const [ products, setProducts ] = useState<any>([]);
 

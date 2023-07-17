@@ -2,6 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     experimental: {
+        appDir:true,
         serverActions: true,
     },
     // issue https://github.com/vercel/next.js/discussions/49432
