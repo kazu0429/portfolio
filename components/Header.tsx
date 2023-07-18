@@ -48,9 +48,9 @@ const Header = ({session}:{session:Session  | null}) => {
                     </Link>
                     <div className="flex items-center lg:order-2">
                     {session ? (
-                        <button onClick={logOut} className="px-2 py-1 text-black font-medium text-sm rounded  hover:text-white hover:bg-gray-500 hover:berder-gray-600">Log out</button>
+                        <button onClick={logOut} className="px-2 py-1 text-black font-medium text-sm rounded  hover:text-white hover:bg-indigo-500 hover:berder-gray-600">Log out</button>
                     ):(
-                        <Link href='/signin' className="px-2 py-1 text-black font-medium text-sm rounded  hover:text-white hover:bg-gray-500 hover:berder-gray-600">Log in</Link>
+                        <Link href='/signin' className="px-2 py-1 text-black font-medium text-sm rounded  hover:text-white hover:bg-indigo-500 hover:berder-gray-600">Log in</Link>
                     )}
                     
                         <button onClick={() => setIsOpen(!isOpen)} type="button" data-collapse-toggle="mobile-menu-2" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 hover:bg-white dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
