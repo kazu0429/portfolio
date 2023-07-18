@@ -20,7 +20,7 @@ const Login = () => {
                 email,
                 password,
             })
-            alert("ログイン成功しましあ")
+            alert("ログイン成功しました")
             router.push('/')
         }catch(err){
             console.log(err)
