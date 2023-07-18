@@ -78,7 +78,7 @@ export default function Home() {
                                     PHP
                                 </li>
                                 <li className='flex flex-row gap-x-2 items-center'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="ml-1 w-5 h-5">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                                     </svg>
                                     C#
@@ -96,16 +96,16 @@ export default function Home() {
                                         Rust
                                     </li>
                                     <div className='mt-5 text-gray-500'>
-                                        <div className='text-xl text-black'>Frameworks</div>
+                                        <div className='text-xl text-black'>Framework</div>
                                         <ul>
                                             <li>
-                                                React.js
-                                            </li>
-                                            <li>
-                                                Next.js
+                                                Next.js(React.js)
                                             </li>
                                             <li>
                                                 Tailwind CSS
+                                            </li>
+                                            <li>
+                                                Bootstrap
                                             </li>
                                         </ul>
                                     </div>
@@ -113,19 +113,32 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className='space-y-1 text-gray-500'>
-                        <div className='text-xl text-black'>Tools</div>
-                        <ul>
-                            <li>
-                                GitHub
-                            </li>
-                            <li>
-                                VS Code
-                            </li>
-                            <li>
-                                Jupyter Notebook
-                            </li>
-                        </ul>
+                    <div className='flex flex-row justify-start'>
+                        <div className='w-1/2 space-y-1 text-gray-500'>
+                            <div className='text-xl text-black'>Tools</div>
+                            <ul>
+                                <li>
+                                    GitHub
+                                </li>
+                                <li>
+                                    VS Code
+                                </li>
+                                <li>
+                                    Jupyter Notebook
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='w-1/2 space-y-1 text-gray-500'>
+                            <div className='text-xl text-black'>BaaS</div>
+                            <ul>
+                                <li>
+                                    Firabase
+                                </li>
+                                <li>
+                                    Supabase
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
