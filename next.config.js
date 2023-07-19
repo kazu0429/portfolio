@@ -2,8 +2,17 @@
 const nextConfig = {
     reactStrictMode: true,
     experimental: {
-        appDir:true,
+        appDir: true,
         serverActions: true,
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'xedelvngwdwaijrohoks.supabase.co',
+                port: '',
+            },
+        ],
     },
     // issue https://github.com/vercel/next.js/discussions/49432
     webpack: config => {
