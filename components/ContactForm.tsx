@@ -2,6 +2,8 @@
 const ContactForm = () => {
 
     const sendEmail = async (formData:FormData) => {
+        const msg = formData.get("message") as string;
+        const htmlMsg = msg.split("\n").join("<br>");
         try{
             const response = await fetch('/api/sendEmail', {
                 method:'POST',
@@ -9,15 +11,17 @@ const ContactForm = () => {
                     'Content-Type': 'application/json',
                 },
                 body:JSON.stringify({
-                    name:formData.get("lastName"),
+                    firstName:formData.get("firstName"),
+                    lastName:formData.get("lastName"),
                     email:formData.get("email"),
+                    company:formData.get("company"),
                     subject:formData.get("subject"),
-                    message:formData.get("message"),
+                    message:htmlMsg,
                 }),
             });
             if(response.status === 200){
                 const resData = await response.json();
-                alert("メールを送信しました。");
+                alert("お問い合わせありがとうございます！");
             }else{
                 console.log("送信失敗");
             }
