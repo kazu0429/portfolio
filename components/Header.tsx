@@ -16,7 +16,7 @@ const Header = ({session}:{session:Session  | null}) => {
         { name: "Home", to: "/" },
         { name: "Products", to: "/products" },
         { name: "Blogs", to: "/blogs" },
-        { name: "Contact", to: "/contect" },
+        { name: "Contact", to: "/contact" },
     ]
 
     const logOut = async () => {
