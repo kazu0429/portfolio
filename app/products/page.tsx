@@ -1,38 +1,20 @@
-'use client'
-import CardList from '@/components/CardList';
-import { getProducts } from '@/lib/supabaseFunction'
-import React, { useEffect, useState } from 'react'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+import { cookies } from 'next/headers'
+import { Database } from '@/lib/database.types';
+import ProductsDisplay from "@/components/ProductsDisplay";
 
 const Products = async() => {
 
-    const [ products, setProducts ] = useState<any>([]);
+    const supabase = createServerComponentClient<Database>({ cookies })
 
-    useEffect(() => {
-        (async() => {
-            try{
-                const getProductsData = await getProducts();
-                setProducts(getProductsData);
-            }catch(err){
-                console.log(err)
-            }
-        })()
-    },[])
+    const {
+        data: { session },
+    } = await supabase.auth.getSession();
+
+    console.log(session?.user);
 
     return (
-        <>
-        <div className='m-5 flex flex-col gap-y-3'>
-            <div className='flex flex-col justify-left item-left pl-2 text-left'>
-                <div className='flex justify-left'>
-                    <div className='h-16 m-4 flex items-center border-l-2 border-black pl-4'>
-                        <div className='font-bold text-4xl'>
-                            Products
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <CardList products={products}/>
-        </div>
-        </>
+        <ProductsDisplay session={session}/>
     )
 }
 
