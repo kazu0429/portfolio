@@ -8,7 +8,6 @@ import type { Database } from '@/lib/database.types'
 
 const Login = () => {
 
-
     const router = useRouter()
     const supabase = createClientComponentClient<Database>()
 
@@ -16,11 +15,13 @@ const Login = () => {
         const email = String(formData.get('email'))
         const password = String(formData.get('password'))
         try{
-            await supabase.auth.signInWithPassword({
+            const {data, error} = await supabase.auth.signInWithPassword({
                 email,
                 password,
             })
-            alert("ログイン成功しました")
+            if(!error){
+                alert("ログイン成功しました")
+            }
             router.push('/')
         }catch(err){
             console.log(err)
