@@ -1,7 +1,6 @@
 'use client'
 import Image from 'next/image'
 
-
 export default function Home() {
     return (
         <div className='m-5 h-auto justify-center items-center'>
@@ -100,6 +99,9 @@ export default function Home() {
                                         <ul>
                                             <li>
                                                 Next.js(React.js)
+                                            </li>
+                                            <li>
+                                                Vue.js
                                             </li>
                                             <li>
                                                 Tailwind CSS
