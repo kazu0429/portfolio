@@ -9,12 +9,11 @@ type Props = {
 
 const ProductPostField = ({isModal, onClose}:Props) => {
 
-    const [ samune, setSamune] = useState<string>("0");
+    const [ samune, setSamune] = useState<any>(0);
     if(!isModal) return null;
 
     const postProduct = async(formData: FormData) => {
-        console.log(samune)
-        if(samune == "0"){
+        if(!samune){
             alert("サムネイルを選択してください。");
             return;
         }
@@ -25,15 +24,16 @@ const ProductPostField = ({isModal, onClose}:Props) => {
                     'Content-Type': 'application/json',
                 },
                 body:JSON.stringify({
-                    name:formData.get("name"),
-                    samune:samune,
+                    title:formData.get("name"),
+                    image_num:Number(samune),
                     url:formData.get("url"),
-                    outline:formData.get("outline"),
+                    description:formData.get("outline"),
                 }),
             });
             if(response.status === 200){
                 const resData = await response.json();
                 alert("投稿完了");
+                onClose;
             }else{
                 console.log("送信失敗");
             }
@@ -56,12 +56,12 @@ const ProductPostField = ({isModal, onClose}:Props) => {
                         <div>
                             <label htmlFor="samune" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Thumbnail</label>
                             <select id="samune" className="border border-gray-300 rounded-md p-2 block w-full" onChange={(e) => setSamune(e.target.value)}>
-                                <option value="0">Choose a Product Thumbnail</option>
-                                <option value="1">online</option>
-                                <option value="2">innovative</option>
-                                <option value="3">male</option>
-                                <option value="4">science</option>
-                                <option value="5">video_game</option>
+                                <option value={0}>Choose a Product Thumbnail</option>
+                                <option value={1}>online</option>
+                                <option value={2}>innovative</option>
+                                <option value={3}>male</option>
+                                <option value={4}>science</option>
+                                <option value={5}>video_game</option>
                             </select>
                         </div>
                         <div>

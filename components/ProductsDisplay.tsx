@@ -1,7 +1,7 @@
 'use client'
 import CardList from '@/components/CardList';
 import ProductPostButton from './ProductPostButton';
-import { getProducts, getThumbnail } from '@/lib/supabaseFunction'
+import { getProducts } from '@/lib/supabaseFunction'
 import React, { useEffect, useState } from 'react'
 import { Session } from '@supabase/auth-helpers-nextjs'
 
