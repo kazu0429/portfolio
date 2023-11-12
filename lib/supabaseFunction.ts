@@ -7,6 +7,7 @@ export const getProducts = async() => {
             name,
             url
         )`);
+    console.log(data);
     return data;
 }
 
