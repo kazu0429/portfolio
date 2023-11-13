@@ -5,9 +5,9 @@ import { getProducts } from "@/lib/supabaseFunction";
 export async function POST(request: NextRequest) {
     const body = await request.json();
     
-    console.log("post data", body );
-
     const getProductsData = await getProducts();
+    
+    console.log("post data", {id: getProductsData?.length, ...body} );
 
     const { data, error } = await supabase
         .from("products")
