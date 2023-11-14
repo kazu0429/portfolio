@@ -1,8 +1,11 @@
 import Home from '@/components/Home'
+import MotionWrapper from '@/components/MotionWrapper'
 
 export default async function App() {
 
   return (
-    <Home/>
+    <MotionWrapper>
+       <Home/>
+    </MotionWrapper>
   )
 }
