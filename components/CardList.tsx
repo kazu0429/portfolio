@@ -32,7 +32,7 @@ const CardList = (props: Props) => {
                                 <div className="mt-auto flex items-end justify-between">
                                     <div className="flex items-center gap-x-2">
                                         <div>
-                                            <span className="block py-1 text-sm text-gray-400">{formatData(product.updatad_at)}</span>
+                                            <span className="block py-1 text-sm text-gray-400">{formatData(product.updated_at)}</span>
                                         </div>
                                     </div>
                                     <span className="rounded border px-2 py-1 text-sm text-gray-500">{product.tag}</span>
