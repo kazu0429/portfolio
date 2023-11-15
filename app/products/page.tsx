@@ -2,7 +2,6 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
 import { Database } from '@/lib/database.types';
 import ProductsDisplay from "@/components/ProductsDisplay";
-import MotionWrapper from '@/components/MotionWrapper';
 
 const Products = async() => {
 
@@ -15,9 +14,7 @@ const Products = async() => {
     console.log("login user", session?.user);
 
     return (
-        <MotionWrapper>
-            <ProductsDisplay session={session}/>
-        </MotionWrapper>
+        <ProductsDisplay session={session}/>
     )
 }
 
