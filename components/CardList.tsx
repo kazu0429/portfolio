@@ -22,10 +22,9 @@ const CardList = (props: Props) => {
                             initial={{ y: 1000 }} // 下から1000pxの位置から始まる
                             animate={{ y: 0 }}    // 0pxの位置に移動する
                             transition={{
-                                type: "spring",
+                                type:"spring",
                                 duration: 0.8,
                                 delay: i / 10 + 0.1,
-                                ease: "easeOut",
                                 bounce: 0.3
                             }} // アニメーションの時間とイージングを設定
                         >
