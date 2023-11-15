@@ -1,5 +1,6 @@
 import './globals.css'
 import Footer from '@/components/Footer'
+import MotionWrapper from '@/components/MotionWrapper'
 import SupabaseListener from '@/components/supabase-listener'
 
 export const metadata = {
@@ -16,12 +17,16 @@ export default function RootLayout({
     <html lang="en">
       <body className="h-screen w-screen bg-white text-black">
         <div className='flex flex-col justufy-between'>
-            {/* @ts-ignore */}
-            <SupabaseListener />
+          {/* @ts-ignore */}
+          <MotionWrapper>
+          <SupabaseListener />
             <div>
-              {children}
+              <div>
+                {children}
+              </div>
+              <Footer />
             </div>
-            <Footer />
+          </MotionWrapper>
         </div>
       </body>
     </html>
