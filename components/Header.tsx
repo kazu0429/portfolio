@@ -35,7 +35,7 @@ const Header = ({ session }: { session: Session | null }) => {
 
     return (
         <div className='border-b top-0 w-full'>
-            <nav className='border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-white'>
+            <nav className='border-gray-200 px-4 lg:px-6 md:px-6 py-2.5 dark:bg-white'>
                 <div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
                     <Link href="/" className="flex items-center space-x-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mr-3 w-8 h-8  hover:text-indigo-500">
