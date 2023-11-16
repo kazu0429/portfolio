@@ -56,11 +56,11 @@ const Header = ({ session }: { session: Session | null }) => {
                             <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                         </button>
                     </div>
-                    <div className={`justify-between items-center lg:flex lg:w-auto md:flex md:w-auto lg:order-1 md:order-1 mt-2 shadow-black bg-white w-full ${!isOpen && "hidden"}`} id="mobile-menu-2">
-                        <ul className={`flex flex-col lg:flex-row lg:space-x-8 md:flex-row md:space-x-8 sm:mt-0 shadow-black mt-4 font-medium`}>
+                    <div className={`absolute top-16 justify-between bg-white w-1/3 z-50 right-0 mr-4 rounded-lg border lg:items-center md:items-center lg:flex lg:w-auto md:flex md:w-auto lg:order-1 md:order-1 md:border-none lg:border-none m-2 shadow-black lg:relative md:relative lg:top-0 md:top-0 ${!isOpen && "hidden"}`} id="mobile-menu-2">
+                        <ul className={`flex flex-col lg:flex-row lg:space-x-8 md:flex-row md:space-x-8 shadow-black font-medium`}>
                             {Menus.map((menu, i) => (
                                 <li key={i}>
-                                    <Link href={menu.to} className="block py-2 pr-4 pl-3 hover:text-indigo-500 border-100 lg:border-0 lg:p-0 md:p-0">{menu.name}</Link>
+                                    <Link href={menu.to} className="block py-2 pl-3 border transition hover:border-indigo-500  hover:text-indigo-500 border-100 lg:border-0 md:border-0 lg:p-0 md:p-0">{menu.name}</Link>
                                 </li>
                             ))}
                         </ul>
