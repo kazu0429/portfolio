@@ -1,14 +1,26 @@
 'use client'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function Home() {
     return (
         <div className='m-5 h-auto justify-center items-center'>
             <div className='m-2 lg:flex lg:flex-row md:flex md:flex-row sm:flex sm:flex-col lg:justify-center items-center gap-x-12 sm:gap-y-4'>
                 <div className='py-4 px-3 lg:w-1/3 md:w-2/4 sm:w-3/5 flex flex-col border-gray-800 bg-gray-100 gap-y-3'>
+                    <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ rotate: 360, scale: 1 }}
+                        transition={{
+                            delay:0.7,
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 20
+                        }}
+                    >
                     <div className='m-4 flex justify-center'>
-                        <Image src="/image/icon.png" height={400} width={400} alt='profile' />
+                        <Image src="/image/icon.png" height={400} width={400} alt='profile' className='rounded-lg' />
                     </div>
+                    </motion.div>
                     <div className='font-bold text-xl'>Kazuki Akimoto（秋本 一樹）</div>
                     <div className='flex gap-x-4'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-gray-500">
