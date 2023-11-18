@@ -27,14 +27,14 @@ export default function MotionWrapper({
 
     return (
         <AnimatePresence>
-            <div className='absolute'>
+            <div className='mt-16' >
                 <motion.div
                     key={pathName}
                     initial="initial" //　初期状態
                     animate="animate" // マウント時
                     variants={vatiants}
                     transition={{ duration: 0.5, delayChildren: 0.2 }}
-                    className='relative bg-black dark:bg-white'
+                    className=' bg-black dark:bg-white'
                 >
                     <motion.div
                         initial={{ opacity: 0 }}
