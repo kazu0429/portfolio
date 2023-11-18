@@ -34,7 +34,7 @@ export default function MotionWrapper({
                     animate="animate" // マウント時
                     variants={vatiants}
                     transition={{ duration: 0.5, delayChildren: 0.2 }}
-                    className='relative bg-black'
+                    className='relative bg-black dark:bg-white'
                 >
                     <motion.div
                         initial={{ opacity: 0 }}
