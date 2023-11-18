@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className='p-3 w-screen flex flex-col justify-center gap-y-3 items-center'>
-            <div>
+            <div className='text-center'>
                 ©︎ 2023 portfolio Kazuki Akimoto All Rights Reserved.
             </div>
             <div className="flex gap-4">
