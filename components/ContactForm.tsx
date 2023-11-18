@@ -35,9 +35,9 @@ const ContactForm = () => {
             <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
                 <div className="mb-10 md:mb-16">
                     <div className="mb-4 h-12 flex items-center border-l-2 border-black pl-4">
-                        <h2 className="text-left text-4xl font-bold text-gray-800 lg:text-3xl">Contact</h2>
+                        <h2 className="text-left text-4xl font-bold lg:text-3xl">Contact</h2>
                     </div>
-                    <p className="mx-auto max-w-screen-md text-left text-gray-500 ">私へのお問い合わせはこちらからお願いいたします。</p>
+                    <p className="mx-auto max-w-screen-md text-left text-gray-500 dark:text-white">私へのお問い合わせはこちらからお願いいたします。</p>
                 </div>
 
                 <form action={sendEmail} className="mx-auto grid max-w-screen-md gap-6 sm:grid-cols-2">
