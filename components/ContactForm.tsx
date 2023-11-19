@@ -1,5 +1,10 @@
 'use client'
+
+import { useRef } from "react"
+
 const ContactForm = () => {
+
+    const ref = useRef<HTMLFormElement>(null)
 
     const sendEmail = async (formData:FormData) => {
         const msg = formData.get("message") as string;
@@ -27,6 +32,8 @@ const ContactForm = () => {
             }
         }catch(err){
             console.log(err);
+        }finally{
+            ref.current?.reset();
         }
     }
 
@@ -40,7 +47,7 @@ const ContactForm = () => {
                     <p className="mx-auto max-w-screen-md text-left text-gray-500 dark:text-white">私へのお問い合わせはこちらからお願いいたします。</p>
                 </div>
 
-                <form action={sendEmail} className="mx-auto grid max-w-screen-md gap-6 sm:grid-cols-2">
+                <form action={sendEmail} ref={ref} className="mx-auto grid max-w-screen-md gap-6 sm:grid-cols-2">
                     <div>
                         <label htmlFor="firstName" className="mb-2 inline-block text-sm  sm:text-base">First name<span className="text-indigo-500">*</span></label>
                         <input name="firstName" className="w-full rounded border dark:border-zinc-900  bg-gray-5 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring" />
