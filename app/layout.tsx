@@ -1,6 +1,6 @@
 import './globals.css'
-import Footer from '@/components/Footer'
-import MotionWrapper from '@/components/MotionWrapper'
+import Footer from '@/components/Layout/Footer'
+import MotionWrapper from '@/components/Layout/MotionWrapper'
 import SupabaseListener from '@/components/supabase-listener'
 import { Providers } from './providers'
 
