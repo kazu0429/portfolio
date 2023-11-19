@@ -3,7 +3,7 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs"
 import { cookies } from "next/headers"
 import type { Database } from "@/lib/database.types"
-import Header from "./Header"
+import Header from "./Layout/Header"
 
 const SupabaseListener = async () => {
     const supabase = createServerComponentClient<Database>({cookies})
