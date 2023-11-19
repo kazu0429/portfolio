@@ -109,7 +109,7 @@ export default function Home() {
                                         Rust
                                     </li>
                                     <div className='mt-5'>
-                                        <div className='text-xlk'>Framework</div>
+                                        <div className='text-xl'>Framework</div>
                                         <ul>
                                             <li>
                                                 Next.js(React.js)
