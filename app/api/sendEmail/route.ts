@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY ?? '');
 
     const msgToManager:MailDataRequired  = {
-        to: "k.shouhi0412@i.softbank.jp",
+        to: process.env.EMALE_ADDRESS!,
         from: body.email,
         subject: body.subject,
         text:`${body.lastName}さんからのお問い合わせ`,
