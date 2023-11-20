@@ -49,33 +49,33 @@ const ContactForm = () => {
 
                 <form action={sendEmail} ref={ref} className="mx-auto grid max-w-screen-md gap-6 sm:grid-cols-2">
                     <div>
-                        <label htmlFor="firstName" className="mb-2 inline-block text-sm  sm:text-base">First name<span className="text-indigo-500">*</span></label>
-                        <input name="firstName" className="w-full rounded border dark:border-zinc-900  bg-gray-5 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring" />
+                        <label htmlFor="firstName" className="input_item">First name<span className="text-indigo-500">*</span></label>
+                        <input name="firstName" className="input_field" />
                     </div>
 
                     <div>
-                        <label htmlFor="lastName" className="mb-2 inline-block text-sm sm:text-base">Last name<span className="text-indigo-500">*</span></label>
-                        <input name="lastName" className="w-full rounded border dark:border-zinc-900 bg-gray-5 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring" />
+                        <label htmlFor="lastName" className="input_item">Last name<span className="text-indigo-500">*</span></label>
+                        <input name="lastName" className="input_field" />
                     </div>
 
                     <div className="sm:col-span-2">
-                        <label htmlFor="company" className="mb-2 inline-block text-sm sm:text-base">Company or School</label>
-                        <input name="company" className="w-full rounded border dark:border-zinc-900 bg-gray-5 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring" />
+                        <label htmlFor="company" className="input_item">Company or School</label>
+                        <input name="company" className="input_field" />
                     </div>
 
                     <div className="sm:col-span-2">
-                        <label htmlFor="email" className="mb-2 inline-block text-sm sm:text-base">Email<span className="text-indigo-500">*</span></label>
-                        <input name="email" className="w-full rounded border dark:border-zinc-900 bg-gray-5 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring" />
+                        <label htmlFor="email" className="input_item">Email<span className="text-indigo-500">*</span></label>
+                        <input name="email" className="input_field" />
                     </div>
 
                     <div className="sm:col-span-2">
-                        <label htmlFor="subject" className="mb-2 inline-block text-smsm:text-base">Subject<span className="text-indigo-500">*</span></label>
-                        <input name="subject" className="w-full rounded border dark:border-zinc-900 bg-gray-5 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring" />
+                        <label htmlFor="subject" className="input_item">Subject<span className="text-indigo-500">*</span></label>
+                        <input name="subject" className="input_field" />
                     </div>
 
                     <div className="sm:col-span-2">
-                        <label htmlFor="message" className="mb-2 inline-block text-sm sm:text-base">Message<span className="text-indigo-500">*</span></label>
-                        <textarea name="message" className="h-64 w-full rounded border dark:border-zinc-900 bg-gray-5 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring whitespace-pre-wrap"></textarea>
+                        <label htmlFor="message" className="input_item">Message<span className="text-indigo-500">*</span></label>
+                        <textarea name="message" className="input_field  h-64 whitespace-pre-wrap"></textarea>
                     </div>
 
                     <div className="flex items-center justify-between sm:col-span-2">

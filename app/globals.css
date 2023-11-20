@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .input_item {
+        @apply mb-2 inline-block text-sm sm:text-base;
+    }
+
+    .input_field {
+        @apply w-full rounded border bg-zinc-100 dark:border-zinc-900 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring;
+    }
+}
