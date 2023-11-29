@@ -15,7 +15,7 @@ export default function Home() {
                                 delay: 0.7,
                                 type: "spring",
                                 stiffness: 260,
-                                damping: 20
+                                damping: 15
                             }}
                         >
                             <div className='m-4 flex justify-center'>
@@ -30,7 +30,8 @@ export default function Home() {
                             <div className=''>Kagoshima Univ.</div>
                         </div>
                         <div className='flex flex-row flex-wrap'>
-                            鹿児島大学工学部に所属する大学3年生です。プログラミング研究に属しており、主にWeb開発について学習してます。<br />
+                            鹿児島大学工学部に所属する大学3年生です。プログラミング研究に属しており、主にWeb開発、フロントエンドについて学習してます。<br />
+                            バックエンドについても今後学習を進める予定です。<br/>
                             このポートフォリオサイトでは、私のこれまでプロダクト開発やブログ記事の一覧を掲載しています。
                         </div>
                         <div className='flex flex-row gap-x-2 my-2'>
@@ -108,6 +109,9 @@ export default function Home() {
                                     <li>
                                         Rust
                                     </li>
+                                    <li>
+                                        Bun(ElysiaJS)
+                                    </li>
                                     <div className='mt-5'>
                                         <div className='text-xl'>Framework</div>
                                         <ul>
@@ -141,6 +145,9 @@ export default function Home() {
                                 </li>
                                 <li>
                                     Jupyter Notebook
+                                </li>
+                                <li>
+                                    Emacs
                                 </li>
                             </ul>
                         </div>
