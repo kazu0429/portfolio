@@ -42,7 +42,7 @@ const Language = ({ name, level }: LanguageProps) => {
 }
 
 const itemVariants = (initPos: number, i: number): Variants => {
-    const defaultDuration = 0.5; 
+    const defaultDuration = 0.5;
     const itemDurationSpan = 0.15;
 
     return {
@@ -54,7 +54,7 @@ const itemVariants = (initPos: number, i: number): Variants => {
             x: 0,
             opacity: 1,
             transition: {
-                delay:0.5,
+                delay: 0.5,
                 duration: i * itemDurationSpan + defaultDuration,
                 ease: "easeOut"
             },
@@ -95,24 +95,24 @@ const Skills = () => {
     const baas = ["Firebase", "Supabase"];
 
     return (
-        <motion.div 
+        <motion.div
             variants={{
                 offscreen: { // 画面外の場合のスタイル
-                    y:300,
+                    y: 300,
                     opacity: 0,
                 },
                 onscreen: { // 画面内の場合のスタイル
                     y: 0,
                     opacity: 1,
                     transition: {
-                        delay:0.3,
+                        delay: 0.3,
                         duration: 0.7,
                         ease: "easeOut"
                     },
                 }
             }}
             initial="offscreen"
-            whileInView="onscreen" 
+            whileInView="onscreen"
             viewport={{ once: true, amount: 0 }}
             className="mt-6 flex flex-col lg:w-1/3 md:w-2/4 sm:w-3/5 gap-y-5"
         >
@@ -127,9 +127,12 @@ const Skills = () => {
                     <ul
                         className='space-y-1 '>
                         {languages.map((item, i) => (
-                            <ItemMotion initPos={-100} i={i}>
-                                <Language name={item.name} level={item.level} />
-                            </ItemMotion>
+                            <div key={i}>
+                                <ItemMotion initPos={-100} i={i}>
+                                    <Language name={item.name} level={item.level} />
+                                </ItemMotion>
+                            </div>
+
                         ))}
                     </ul>
                 </div>
@@ -138,7 +141,10 @@ const Skills = () => {
                     <div className='space-y-1'>
                         <ul>
                             {learning.map((content, i) => (
-                                <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
+                                <div key={i}>
+                                    <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
+                                </div>
+
                             ))}
                         </ul>
                     </div>
@@ -146,7 +152,10 @@ const Skills = () => {
                         <div className='text-xl'>Framework</div>
                         <ul>
                             {frameWorks.map((frameWork, i) => (
-                                <ItemMotion initPos={100} i={i}>{frameWork}</ItemMotion>
+                                <div key={i}>
+                                    <ItemMotion initPos={100} i={i}>{frameWork}</ItemMotion>
+                                </div>
+
                             ))}
                         </ul>
                     </div>
@@ -157,7 +166,10 @@ const Skills = () => {
                     <div className='text-xl font-medium'>Tools</div>
                     <ul>
                         {tools.map((tool, i) => (
-                            <ItemMotion initPos={-100} i={i}>{tool}</ItemMotion>
+                            <div key={i}>
+                                <ItemMotion initPos={-100} i={i}>{tool}</ItemMotion>
+                            </div>
+                            
                         ))}
                     </ul>
                 </div>
@@ -165,7 +177,9 @@ const Skills = () => {
                     <div className='text-xl font-medium'>BaaS</div>
                     <ul>
                         {baas.map((content, i) => (
-                            <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
+                            <div key={i}>
+                                <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
+                            </div>
                         ))}
                     </ul>
                 </div>
