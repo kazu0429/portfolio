@@ -14,8 +14,8 @@ const CardList = (props: Props) => {
 
     return (
         <>
-            <div className='mt-8 flex lg:justify-around sm:justify-start'>
-                <div className="mx-4 grid gap-4 sm:grid-cols-2 md:gap-6 md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
+            <div className='mt-8 flex justify-around'>
+                <div className="mx-4 grid gap-4 sm:grid-cols-2 md:gap-6 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
                     {products.map((product, i) => (
                         <motion.div
                             key={i}
