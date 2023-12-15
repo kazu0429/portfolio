@@ -10,4 +10,7 @@
     .input_field {
         @apply w-full rounded border bg-zinc-100 dark:border-zinc-900 dark:bg-zinc-800 px-3 py-2 text-gray-800 dark:text-white outline-none ring-indigo-300 transition duration-100 focus:ring;
     }
+    .tool_chip {
+        @apply text-sm rounded py-2 px-2  bg-gray-400 text-white pointer-events-none absolute -top-11 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 transition before:absolute before:left-1/2 before:top-full before:-translate-x-1/2 before:border-4 before:border-transparent before:border-t-gray-400 before:content-[''] group-hover:opacity-100;
+    }
 }
