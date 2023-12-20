@@ -118,7 +118,7 @@ const Skills = () => {
         >
             <div className='mt-8 font-bold text-4xl'>PORTFOLIO</div>
             <div className='text-2xl'>
-                Skills
+                Skills <span>!</span>
             </div>
             <div className='flex flex-row justify-start'>
                 <div
