@@ -117,22 +117,21 @@ const Skills = () => {
             className="mt-6 flex flex-col lg:w-1/3 md:w-2/4 sm:w-3/5 gap-y-5"
         >
             <div className='mt-8 font-bold text-4xl'>PORTFOLIO</div>
-            <div className='text-2xl'>
-                Skills <span>!</span>
+            <div className='text-2xl font-bold'>
+                <div>Skills</div>
             </div>
             <div className='flex flex-row justify-start'>
                 <div
                     className='w-1/2'>
                     <div className='text-xl font-medium'>Languages</div>
                     <ul
-                        className='space-y-1 '>
+                        className='space-y-1'>
                         {languages.map((item, i) => (
                             <div key={i}>
                                 <ItemMotion initPos={-100} i={i}>
                                     <Language name={item.name} level={item.level} />
                                 </ItemMotion>
                             </div>
-
                         ))}
                     </ul>
                 </div>
@@ -144,7 +143,6 @@ const Skills = () => {
                                 <div key={i}>
                                     <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
                                 </div>
-
                             ))}
                         </ul>
                     </div>
@@ -155,7 +153,6 @@ const Skills = () => {
                                 <div key={i}>
                                     <ItemMotion initPos={100} i={i}>{frameWork}</ItemMotion>
                                 </div>
-
                             ))}
                         </ul>
                     </div>
@@ -169,7 +166,6 @@ const Skills = () => {
                             <div key={i}>
                                 <ItemMotion initPos={-100} i={i}>{tool}</ItemMotion>
                             </div>
-                            
                         ))}
                     </ul>
                 </div>
