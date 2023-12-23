@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    darkMode: 'class',
     reactStrictMode: true,
     experimental: {
         appDir: true,

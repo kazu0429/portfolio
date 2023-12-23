@@ -1,5 +1,8 @@
+'use client';
+
 import React from "react";
-import { motion, Variants } from "framer-motion"
+import { motion,Variants } from "framer-motion"
+import { useState } from "react";
 
 interface LanguageProps {
     name: string;
@@ -63,6 +66,9 @@ const itemVariants = (initPos: number, i: number): Variants => {
 }
 
 const ItemMotion = ({ children, initPos, i }: itemMotionProps) => {
+
+    const [isDragging, setIsDragging] = useState(false);
+
     return (
         <motion.li
             key={i}
@@ -70,12 +76,27 @@ const ItemMotion = ({ children, initPos, i }: itemMotionProps) => {
             initial="offscreen" // 初期表示はoffscreen
             whileInView="onscreen" // 画面内に入ったらonscreen
             viewport={{ once: true, amount: 0 }}
-            className="flex flex-row gap-x-2"
         >
-            {children}
+            <motion.div
+                drag
+                dragConstraints={{
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                }}
+                dragElastic={0.5}
+                onDragStart={() => setIsDragging(true)}
+                onDragEnd={() => setIsDragging(false)}
+                whileHover={{ scale: 1.15 }}
+                className={`flex flex-row gap-x-2 w-fit relative`}>
+          {children}
+        {isDragging && (
+          <div className=" absolute -top-1 left-0 w-full h-full py-4 ring-2 rounded-2xl ring-gray-300" />
+        )}
+            </motion.div>
         </motion.li>
     )
-
 }
 
 const Skills = () => {
@@ -89,7 +110,7 @@ const Skills = () => {
         { name: "C#", level: 1 },
         { name: "Dart", level: 1 }
     ]
-    const tools = ["Github", "VS Code", "Jupyter Notebook", "Emacs"];
+    const tools = ["GitHub", "VS Code", "Jupyter Notebook", "Emacs"];
     const learning = ["Go lang", "Rust", "Bun(ElysiaJS)"];
     const frameWorks = ["Next.js(React.js)", "Vue.js", "Tailwind CSS", "Bootstrap"];
     const baas = ["Firebase", "Supabase"];
@@ -117,22 +138,21 @@ const Skills = () => {
             className="mt-6 flex flex-col lg:w-1/3 md:w-2/4 sm:w-3/5 gap-y-5"
         >
             <div className='mt-8 font-bold text-4xl'>PORTFOLIO</div>
-            <div className='text-2xl'>
-                Skills
+            <div className='text-2xl font-bold'>
+                <div>Skills</div>
             </div>
             <div className='flex flex-row justify-start'>
                 <div
                     className='w-1/2'>
                     <div className='text-xl font-medium'>Languages</div>
                     <ul
-                        className='space-y-1 '>
+                        className='space-y-1'>
                         {languages.map((item, i) => (
                             <div key={i}>
-                                <ItemMotion initPos={-100} i={i}>
+                                <ItemMotion initPos={-80} i={i}>
                                     <Language name={item.name} level={item.level} />
                                 </ItemMotion>
                             </div>
-
                         ))}
                     </ul>
                 </div>
@@ -144,7 +164,6 @@ const Skills = () => {
                                 <div key={i}>
                                     <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
                                 </div>
-
                             ))}
                         </ul>
                     </div>
@@ -155,7 +174,6 @@ const Skills = () => {
                                 <div key={i}>
                                     <ItemMotion initPos={100} i={i}>{frameWork}</ItemMotion>
                                 </div>
-
                             ))}
                         </ul>
                     </div>
@@ -169,7 +187,6 @@ const Skills = () => {
                             <div key={i}>
                                 <ItemMotion initPos={-100} i={i}>{tool}</ItemMotion>
                             </div>
-                            
                         ))}
                     </ul>
                 </div>
