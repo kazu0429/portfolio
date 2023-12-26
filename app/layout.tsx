@@ -20,21 +20,6 @@ export const metadata: Metadata = {
       alt: 'Portfolio Logo',
     },
   },
-  openGraph: {
-    title: 'Portfolio',
-    description: 'The React Framework for the Web',
-    url: process.env.NEXT_PUBLIC_URL,
-    siteName: 'Next.js',
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_URL}/opengraph-image.jpeg`,
-        width: 650,
-        height: 400,
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
 }
 
 export default function RootLayout({
