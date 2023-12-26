@@ -13,13 +13,19 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Portfolio',
-    description: 'The React Framework for the Web',
+    description: 'This is a my portfolio created by Nextjs',
     creator: '@kazu0429',
     images: {
       url: `${process.env.NEXT_PUBLIC_URL}/opengraph-image.jpeg`,
       alt: 'Portfolio Logo',
     },
   },
+  openGraph:{
+    images:{
+      url: `${process.env.NEXT_PUBLIC_URL}/opengraph-image.jpeg`,
+      alt: 'Portfolio Logo',
+    }
+  }
 }
 
 export default function RootLayout({
