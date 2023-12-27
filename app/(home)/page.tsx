@@ -1,4 +1,4 @@
-import Home from '@/components/Home/Home'
+import Home from '@/app/(home)/_components/Home'
 
 export default async function App() {
 

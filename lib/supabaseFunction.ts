@@ -10,12 +10,15 @@ export const getProducts = async() => {
     if(error){
         console.log(error);
     }
-    console.log(data);
+
     return data;
 }
 
 export const getThumbnail = async() => {
     const {data, error} = await supabase.from("images").select(`name`);
+    if(error){
+        console.log(error);
+    }
 
     return data
 }

@@ -1,7 +1,7 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
 import { Database } from '@/lib/database.types';
-import ProductsDisplay from "@/components/Product/ProductsDisplay";
+import ProductsDisplay from "@/app/products/_componetns/ProductsDisplay";
 
 const Products = async() => {
 

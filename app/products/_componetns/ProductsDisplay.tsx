@@ -1,5 +1,5 @@
 'use client'
-import CardList from '@/components/Product/CardList';
+import CardList from '@/app/products/_componetns/CardList';
 import ProductPostButton from './ProductPostButton';
 import { getProducts } from '@/lib/supabaseFunction'
 import React, { useEffect, useState } from 'react'
