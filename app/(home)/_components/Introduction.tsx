@@ -74,7 +74,7 @@ const Introduction = () => {
                 <ol className="ml-5 relative border-s border-gray-400 dark:border-gray-600">
                     <li className="mb-10 ms-6">
                         <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-indigo-200 dark:ring-gray-900 dark:bg-indigo-800">
-                            <AcademicSvg/>
+                            <AcademicSvg />
                         </span>
                         <time className="text-sm mb-1 font-normal leading-none text-gray-400 dark:text-gray-500">2017/4 - 2020/3</time>
                         <p className="font-bold">小倉商業高校</p>
@@ -86,7 +86,7 @@ const Introduction = () => {
                     </li>
                     <li className="mb-10 ms-6">
                         <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-indigo-200 dark:ring-gray-900 dark:bg-indigo-800">
-                            <AcademicSvg/>
+                            <AcademicSvg />
                         </span>
                         <time className="text-sm mb-1 font-normal leading-none text-gray-400 dark:text-gray-500">2020/4 - 2022/3</time>
                         <p className="font-bold">福岡工業大学短期大学部</p>
@@ -98,7 +98,7 @@ const Introduction = () => {
                     </li>
                     <li className="mb-10 ms-6">
                         <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-indigo-200 dark:ring-gray-900 dark:bg-indigo-800">
-                            <AcademicSvg/>
+                            <AcademicSvg />
                         </span>
                         <time className="text-sm mb-1 font-normal leading-none text-gray-400 dark:text-gray-500">2022/4 ~ 現在</time>
                         <p className="font-bold">鹿児島大学</p>
@@ -114,4 +114,4 @@ const Introduction = () => {
     )
 }
 
-export default Introduction
+export default Introduction;

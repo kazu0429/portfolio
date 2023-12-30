@@ -43,7 +43,7 @@ const Header = ({ session }: { session: Session | null }) => {
                 <div className='flex justify-between items-center mx-auto max-w-screen-xl'>
                     <Link href="/" className="flex items-center space-x-4">
                         <Image src="/image/icon-resize.png" height={35} width={35} alt='profile' className="rounded-2xl hover:scale-110" />
-                        <span className="self-center text-xl font-semibold whitespace-nowrap  hover:text-indigo-300">KazuPortfolio</span>
+                        <div className="self-center text-xl font-semibold whitespace-nowrap  hover:text-indigo-300">KazuPortfolio</div>
                     </Link>
                     <div className="flex items-center lg:order-2 md:order-2">
                         <div className='inline-flex items-center'>

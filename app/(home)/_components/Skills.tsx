@@ -148,11 +148,11 @@ const Skills = () => {
                     <ul
                         className='space-y-1'>
                         {languages.map((item, i) => (
-                            <div key={i}>
+                            <code key={i}>
                                 <ItemMotion initPos={-80} i={i}>
                                     <Language name={item.name} level={item.level} />
                                 </ItemMotion>
-                            </div>
+                            </code>
                         ))}
                     </ul>
                 </div>
@@ -161,9 +161,9 @@ const Skills = () => {
                     <div className='space-y-1'>
                         <ul>
                             {learning.map((content, i) => (
-                                <div key={i}>
+                                <code key={i}>
                                     <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
-                                </div>
+                                </code>
                             ))}
                         </ul>
                     </div>
@@ -171,9 +171,9 @@ const Skills = () => {
                         <div className='text-xl'>Framework</div>
                         <ul>
                             {frameWorks.map((frameWork, i) => (
-                                <div key={i}>
+                                <code key={i}>
                                     <ItemMotion initPos={100} i={i}>{frameWork}</ItemMotion>
-                                </div>
+                                </code>
                             ))}
                         </ul>
                     </div>
@@ -184,9 +184,9 @@ const Skills = () => {
                     <div className='text-xl font-medium'>Tools</div>
                     <ul>
                         {tools.map((tool, i) => (
-                            <div key={i}>
+                            <code key={i}>
                                 <ItemMotion initPos={-100} i={i}>{tool}</ItemMotion>
-                            </div>
+                            </code>
                         ))}
                     </ul>
                 </div>
@@ -194,9 +194,9 @@ const Skills = () => {
                     <div className='text-xl font-medium'>BaaS</div>
                     <ul>
                         {baas.map((content, i) => (
-                            <div key={i}>
+                            <code key={i}>
                                 <ItemMotion initPos={100} i={i}>{content}</ItemMotion>
-                            </div>
+                            </code>
                         ))}
                     </ul>
                 </div>
