@@ -5,10 +5,11 @@ import { useState, useEffect } from 'react';
 
 import { getBlogs } from '@/lib/supabaseFunction';
 import { Blog } from '@/types/Type';
+import { Blogs } from '@/lib/database.types';
 
 const BlogCard = () => {
 
-    const [ blogs, setBlogs ] = useState<Array<Blog>>();
+    const [ blogs, setBlogs ] = useState<Blogs[]>();
 
     useEffect(() => {
         (async() => {

@@ -1,5 +1,7 @@
 'use server'
+
 import { supabase } from "./supabase"
+import { Blogs } from "./database.types";
 
 export const getProducts = async () => {
     try {
@@ -29,14 +31,14 @@ export const getProducts = async () => {
 
 export const getBlogs = async () => {
     try {
-        const { data, error } = await supabase.from("blogs").select();
+        const { data, error } = await supabase.from('blogs').select().returns<Blogs[]>();
 
         if (error) {
             console.error("Supabase error:", error.message);
             throw new Error("Supabase error");
         }
 
-        console.log(data);
+        console.log(data[0]?.id);
 
         return data;
 
