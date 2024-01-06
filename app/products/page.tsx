@@ -11,7 +11,7 @@ const Products = async() => {
         data: { session },
     } = await supabase.auth.getSession();
 
-    console.log("login user", session?.user);
+    // console.log("login user", session?.user);
 
     return (
         <ProductsDisplay session={session}/>

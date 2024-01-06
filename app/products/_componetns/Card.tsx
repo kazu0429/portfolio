@@ -1,4 +1,4 @@
-import { Product } from "@/types/product";
+import { Product } from "@/types/Type";
 import Image from "next/image";
 
 const Card = (props:Product) => {

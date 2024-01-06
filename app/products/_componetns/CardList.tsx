@@ -1,4 +1,4 @@
-import { Product } from '@/types/product'
+import { Product } from '@/types/Type'
 
 import React from 'react'
 import { motion } from 'framer-motion'
