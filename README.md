@@ -9,6 +9,6 @@
 ## Stack
 - Next.js- use Framework
 - TypeScript - use language
-- Supabese - Product DB
+- Supabese - Product, Blog DB
 - SendGrid - Contact Form
 - FramerMotion - Site Animation
