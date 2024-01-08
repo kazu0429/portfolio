@@ -1,10 +1,15 @@
+'use client'
+
 import { Product } from "@/types/Type";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = (props:Product) => {
-    const { 
-        id, 
+const Card = (props: Product) => {
+    const { theme, setTheme } = useTheme();
+
+    const {
+        id,
         title,
         images,
         url,
@@ -28,13 +33,19 @@ const Card = (props:Product) => {
                     <a href={url} target='_brank' className="transition duration-100 hover:text-indigo-500 active:text-indigo-600">{title}</a>
                 </h2>
                 <p className="">{description}</p>
-                <div className="mt-auto flex items-end justify-between">
-                    <div className="flex items-center gap-x-2">
-                        <div>
+                <div className="mt-3">
+                    <div className="flex justify-between items-center">
+                        <div className="flex gap-x-2">
+                        {tag.split(",").map((name, i) => (
+                            <div key={i}>
+                                <Image src={`https://skillicons.dev/icons?i=${name}&theme=${theme}`} alt={tag} width={40} height={40} />
+                            </div>
+                        ))}
+                        </div>
+                        <div className="h-10">
                             <span className="block pt-2 text-sm text-gray-400">{formatData(updated_at)}</span>
                         </div>
                     </div>
-                    {/* <span className="rounded border px-2 py-1 text-sm text-gray-500">{tag}</span> */}
                 </div>
             </div>
         </div>
