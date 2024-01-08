@@ -80,7 +80,7 @@ const ProductPostField = ({isModal, onClose}:Props) => {
                         <div>
                             <label htmlFor="outline" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Product Outline</label>
                             <textarea name="outline" onChange={handleChangeTextarea} ref={ textAreaRef } rows={4} className="resize-none w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
-                            <p className={`text-black ${outlineLenght > 50 && "text-red-900"}`}>letter : <span>{outlineLenght}</span> / 50 </p>
+                            <p className={`text-black ${outlineLenght > 50 && "text-red-900"}`}>letter : <span>{outlineLenght}</span> / 80 </p>
                         </div>
                     </div>
                         <div className="m-5 flex flex-row justify-around">

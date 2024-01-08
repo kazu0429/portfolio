@@ -23,7 +23,7 @@ const ProductsDisplay = ({ session }: { session: Session | null }) => {
 
     return (
         <>
-        <div className='m-5 flex flex-col gap-y-3'>
+        <div className='mx-5 flex flex-col gap-y-3'>
             <div className='flex flex-col justify-left item-left pl-2 text-left'>
                 <div className='flex justify-between items-center'>
                     <div className='h-16 m-4 flex items-center border-l-2 pl-4'>

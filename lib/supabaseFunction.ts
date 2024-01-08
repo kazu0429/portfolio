@@ -1,7 +1,7 @@
 'use server'
 
 import { supabase } from "./supabase"
-import { Blogs } from "./database.types";
+import RssParser from "rss-parser";
 
 export const getProducts = async () => {
     try {
@@ -31,16 +31,26 @@ export const getProducts = async () => {
 
 export const getBlogs = async () => {
     try {
-        const { data, error } = await supabase.from('blogs').select().returns<Blogs[]>();
+        const parser = new RssParser();
 
-        if (error) {
-            console.error("Supabase error:", error.message);
-            throw new Error("Supabase error");
-        }
+        const xmlText = await fetch(`https://zenn.dev/kazu0429/feed?all=1`, {
+            next: { revalidate: 60 * 60 * 24 },
+        }).then((res) => res.text());
 
-        console.log(data[0]?.id);
+        const feed = await parser.parseString(xmlText);
+        console.log(feed.items[0]);
 
-        return data;
+        const items =  feed.items.map((item) => ({
+            type: "zenn",
+            title: item.title ?? "",
+            createdAt: item.pubDate
+            ? new Date(item.pubDate).toISOString()
+            : new Date().toISOString(),
+            url: item.link ?? "",
+            thumbnail: item.enclosure?.url ?? "",
+        }));
+
+        return items
 
     } catch (error) {
         if (error instanceof Error) {

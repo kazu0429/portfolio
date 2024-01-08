@@ -12,6 +12,16 @@ const nextConfig = {
                 hostname: 'xedelvngwdwaijrohoks.supabase.co',
                 port: '',
             },
+            {
+                protocol: 'https',
+                hostname: 'res.cloudinary.com',
+                pathname: '/zenn/image/upload/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'zenn.dev',
+                port:"",
+            },
         ],
     },
     // issue https://github.com/vercel/next.js/discussions/49432
