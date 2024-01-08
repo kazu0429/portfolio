@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className='p-3 w-screen flex flex-col justify-center gap-y-3 items-center'>
             <div className='text-center'>
-                ©︎ 2023 portfolio Kazuki Akimoto All Rights Reserved.
+                ©︎ 2024 portfolio Kazuki Akimoto All Rights Reserved.
             </div>
             <div className="flex gap-4">
                 <a href="#" target="_blank" className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-gray-600">

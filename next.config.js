@@ -22,7 +22,13 @@ const nextConfig = {
                 hostname: 'zenn.dev',
                 port:"",
             },
+            {
+                protocol: 'https',
+                hostname: 'skillicons.dev',
+                port:"",
+            },
         ],
+        dangerouslyAllowSVG: true,
     },
     // issue https://github.com/vercel/next.js/discussions/49432
     webpack: config => {
