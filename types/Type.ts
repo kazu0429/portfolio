@@ -14,6 +14,7 @@ export interface Product{
 }
 
 export interface Blog{
+    type:string;
     title:string;
     url:string;
     thumbnail:string;
