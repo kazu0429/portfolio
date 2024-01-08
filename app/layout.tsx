@@ -41,7 +41,9 @@ export default function RootLayout({
             {/* @ts-ignore */}
             <MotionWrapper>
               <SupabaseListener />
-              {children}
+              <div className='h-full'>
+                {children}
+              </div>
               <Footer />
             </MotionWrapper>
           </div>

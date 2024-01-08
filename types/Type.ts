@@ -12,3 +12,10 @@ export interface Product{
         url:string;
     }
 }
+
+export interface Blog{
+    title:string;
+    url:string;
+    thumbnail:string;
+    createdAt:string;
+}
