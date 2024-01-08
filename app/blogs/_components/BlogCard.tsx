@@ -16,7 +16,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
 
     return (
         <Link href={blog.url} target='_blank'>
-            <div className='border-2 rounded-lg transition duration-200 hover:scale-105'>
+            <div className='border-zinc-200 dark:border-zinc-700 border rounded-lg transition duration-200 hover:scale-105'>
                 <Image
                     className='rounded-t-md w-full'
                     src={blog.thumbnail}
@@ -28,10 +28,12 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
                     <div className='font-bold'>
                         {blog.title}
                     </div>
-                    <div className='mx-3 flex justify-between items-center'>
+                    <div className='flex justify-between items-center'>
                         <div className='flex items-center gap-x-2'>
                             <Image src='https://zenn.dev/images/logo-transparent.png' width={20} height={20} alt='zenn' />
-                            <span>zenn.dev</span>
+                            {blog.type === "zenn" && (
+                                <span className='font-bold'>zenn.dev</span>
+                            )}
                         </div>
                         <div className='my-2 text-zinc-500'>
                             {extractDate(blog.createdAt)}

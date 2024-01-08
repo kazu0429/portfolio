@@ -34,8 +34,8 @@ const Login = () => {
     return (
         <main className="flex items-center py-6 sm:py-8 lg:py-12 h-screen">
             <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-                <h2 className="mb-4 text-center text-2xl font-boldmd:mb-8 lg:text-3xl">Sign In!</h2>
-                <form action={signin} className="mx-auto max-w-lg rounded-lg border dark:border-4 dark:border-zinc-800">
+                <h2 className="mb-4 text-center text-2xl font-bold md:mb-8 lg:text-3xl">Sign In!</h2>
+                <form action={signin} className="mx-auto max-w-lg rounded-xl border dark:border-4 dark:border-zinc-800">
                     <div className="flex flex-col gap-4 p-4 md:p-8">
                         <div>
                             <label htmlFor="email" className="mb-2 inline-block text-sm  sm:text-base">Email</label>
