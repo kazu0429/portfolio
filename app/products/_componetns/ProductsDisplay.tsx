@@ -1,6 +1,6 @@
 'use client'
 import CardList from '@/app/products/_componetns/CardList';
-import ProductPostButton from './ProductPostButton';
+import PostButton from './PostButton';
 import { getProducts } from '@/lib/supabaseFunction'
 import React, { useEffect, useState } from 'react'
 import { Session } from '@supabase/auth-helpers-nextjs'
@@ -33,13 +33,13 @@ const ProductsDisplay = ({ session }: { session: Session | null }) => {
                     </div>
                     <div className='mr-5'>
                         {session && (
-                            <ProductPostButton />
+                            <PostButton />
                         )}
                     </div>
                 </div>
             </div>
             <div>
-                <CardList products={products}/>
+                <CardList products={products} session={!!session}/>
             </div>
         </div>
         </>

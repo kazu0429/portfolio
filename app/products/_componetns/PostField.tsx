@@ -1,15 +1,18 @@
 'use client'
 
+import { Product } from "@/types/Type";
 import { useState, useRef } from "react";
 
 type Props = {
     isModal:boolean,
     onClose:() => void,
+    isEdit:boolean,
+    prodoct?:Product
 }
 
-const ProductPostField = ({isModal, onClose}:Props) => {
+const PostField = ({isModal, onClose, isEdit, prodoct}:Props) => {
 
-    const [ samune, setSamune] = useState<number>(0);
+    const [ samune, setSamune] = useState<number>(prodoct?.image_num || 0);
 
     const textAreaRef = useRef<HTMLTextAreaElement>(null);
     const [outlineLenght, setOutlineLenght] = useState<number>(0);
@@ -32,12 +35,52 @@ const ProductPostField = ({isModal, onClose}:Props) => {
                     image_num:Number(samune),
                     url:formData.get("url"),
                     description:formData.get("outline"),
+                    tag:formData.get("tag"),
                 }),
             });
             if(response.status === 200){
                 const resData = await response.json();
                 alert("投稿完了");
-                onClose;
+                onClose();
+            }else{
+                console.log("送信失敗");
+            }
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    const editProduct = async(formData: FormData) => {
+        if(!samune){
+            alert("サムネイルを選択してください。");
+            return;
+        }
+
+        if(outlineLenght > 80){
+            alert("説明を短くしてください");
+            return;
+        }
+
+        try{
+            const response = await fetch('/api/postProduct', {
+                method:'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body:JSON.stringify({
+                    id:formData.get("id"),
+                    title:formData.get("name"),
+                    image_num:Number(samune),
+                    url:formData.get("url"),
+                    description:formData.get("outline"),
+                    tag:formData.get("tag"),
+                }),
+            });
+
+            if(response.status === 200){
+                const resData = await response.json();
+                alert("更新完了");
+                onClose();
             }else{
                 console.log("送信失敗");
             }
@@ -55,12 +98,13 @@ const ProductPostField = ({isModal, onClose}:Props) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-gray-500/50 p-4">
             <div className="relative p-4">
                 <div className="relative rounded-lg px-6 py-4 bg-white shadow">
-                    <form action={postProduct} className="mt-2">
+                    <form action={isEdit ? editProduct : postProduct} className="mt-2">
                     <div className="flex flex-col gap-4">
-                    <p className="text-lg font-bold text-black">New Product</p>
+                    <p className="text-lg font-bold text-black">{isEdit ? "Edit Product":"New Product"}</p>
+                        <input name="id" className="hidden" value={prodoct?.id}></input>
                         <div>
                             <label htmlFor="name" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Product Name</label>
-                            <input type="text" name="name" className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
+                            <input defaultValue={prodoct?.title} type="text" name="name" className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
                         </div>
                         <div>
                             <label htmlFor="samune" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Thumbnail</label>
@@ -74,13 +118,17 @@ const ProductPostField = ({isModal, onClose}:Props) => {
                             </select>
                         </div>
                         <div>
-                            <label htmlFor="url" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Product Image</label>
-                            <input type="text" name="url" className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
+                            <label htmlFor="url" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Product URL</label>
+                            <input defaultValue={prodoct?.url} type="text" name="url" className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
                         </div>
                         <div>
                             <label htmlFor="outline" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Product Outline</label>
-                            <textarea name="outline" onChange={handleChangeTextarea} ref={ textAreaRef } rows={4} className="resize-none w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
-                            <p className={`text-black ${outlineLenght > 50 && "text-red-900"}`}>letter : <span>{outlineLenght}</span> / 80 </p>
+                            <textarea defaultValue={prodoct?.description} name="outline" onChange={handleChangeTextarea} ref={ textAreaRef } rows={4} className="resize-none w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
+                            <p className={`text-black ${outlineLenght > 80 && "text-red-900"}`}>letter : <span>{outlineLenght}</span> / 80 </p>
+                        </div>
+                        <div>
+                            <label htmlFor="tag" className="mb-2 inline-block text-sm text-gray-800 sm:text-base">Product Tag</label>
+                            <input defaultValue={prodoct?.tag} type="text" name="tag" className="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" required />
                         </div>
                     </div>
                         <div className="m-5 flex flex-row justify-around">
@@ -94,4 +142,4 @@ const ProductPostField = ({isModal, onClose}:Props) => {
     )
 }
 
-export default ProductPostField
+export default PostField
