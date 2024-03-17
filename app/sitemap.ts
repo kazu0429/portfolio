@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseURL = process.env.NEXT_PUBLIC_URL || '';
@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: `${baseURL}/products`,
+            lastModified: lastModified,
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseURL}/blogs`,
             lastModified: lastModified,
             changeFrequency: 'monthly',
             priority: 0.7,
