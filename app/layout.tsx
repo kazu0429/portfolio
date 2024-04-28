@@ -1,5 +1,6 @@
 import './globals.css'
 import { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
 
 import Footer from '@/components/Layout/Footer'
 import MotionWrapper from '@/components/Layout/MotionWrapper'
@@ -48,6 +49,7 @@ export default function RootLayout({
             </MotionWrapper>
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   )
