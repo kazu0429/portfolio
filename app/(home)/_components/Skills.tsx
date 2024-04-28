@@ -112,7 +112,7 @@ const Skills = () => {
     ]
     const tools = ["GitHub", "VS Code", "Jupyter Notebook", "Emacs"];
     const learning = ["Go lang", "Rust", "Bun(ElysiaJS)"];
-    const frameWorks = ["Next.js(React.js)", "Vue.js", "Tailwind CSS", "Bootstrap"];
+    const frameWorks = ["Next.js(React.js)", "Remix", "Tailwind CSS", "Bootstrap"];
     const baas = ["Firebase", "Supabase"];
 
     return (

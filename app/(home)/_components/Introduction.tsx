@@ -50,7 +50,7 @@ const Introduction = () => {
                     <span>Kagoshima University</span>
                 </div>
                 <div className='flex flex-row flex-wrap'>
-                    鹿児島大学工学部に所属する大学3年生です。プログラミング研究会に属しており、主にWeb開発、フロントエンドについて学習してます。<br />
+                    鹿児島大学工学部に所属する大学4年生です。プログラミング研究会に属しており、主にWeb開発、フロントエンドについて学習してます。<br />
                     このポートフォリオサイトでは、私のこれまでプロダクト開発やブログ記事の一覧を掲載しています。
                 </div>
             </div>
