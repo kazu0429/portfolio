@@ -25,7 +25,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
                     height={300}
                 />
                 <div className='m-2'>
-                    <div className='w-full font-bold truncate'>
+                    <div className='font-bold truncate'>
                         {blog.title}
                     </div>
                     <div className='flex justify-between items-center'>
