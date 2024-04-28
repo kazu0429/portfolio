@@ -25,6 +25,7 @@
     "eslint-config-next": "13.4.7",
     "framer-motion": "^10.16.4",
     "heroicons": "^2.0.18",
+    "jsdom": "^24.0.0",
     "next": "13.4.7",
     "next-themes": "^0.2.1",
     "portfolio": "github:kazu0429/portfolio",
@@ -40,6 +41,7 @@
     "zustand": "^4.3.9"
   },
   "devDependencies": {
+    "@types/jsdom": "^21.1.6",
     "supabase": "^1.110.1"
   }
 }

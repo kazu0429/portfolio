@@ -13,10 +13,12 @@ export interface Product{
     }
 }
 
-export interface Blog{
+export interface Blog {
+    title: string;
+    content: string;
+    url: string;
+    date: string;
+    thumbnail: string;
+    favicon:string;
     type:string;
-    title:string;
-    url:string;
-    thumbnail:string;
-    createdAt:string;
 }

@@ -25,18 +25,16 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
                     height={300}
                 />
                 <div className='m-2'>
-                    <div className='font-bold'>
+                    <div className='w-full font-bold truncate'>
                         {blog.title}
                     </div>
                     <div className='flex justify-between items-center'>
                         <div className='flex items-center gap-x-2'>
-                            <Image src='https://zenn.dev/images/logo-transparent.png' width={20} height={20} alt='zenn' />
-                            {blog.type === "zenn" && (
-                                <span className='font-bold'>zenn.dev</span>
-                            )}
+                            <Image src={`${blog.favicon}`} width={20} height={20} alt={`${blog.type}`} />
+                            <span className='font-bold'>{blog.type}</span>
                         </div>
                         <div className='my-2 text-zinc-500'>
-                            {extractDate(blog.createdAt)}
+                            {extractDate(blog.date)}
                         </div>
                     </div>
                 </div>

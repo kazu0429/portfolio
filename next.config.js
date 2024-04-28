@@ -6,6 +6,7 @@ const nextConfig = {
         serverActions: true,
     },
     images: {
+        domains: ['assets.st-note.com'],
         remotePatterns: [
             {
                 protocol: 'https',
@@ -20,6 +21,11 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'zenn.dev',
+                port:"",
+            },
+            {
+                protocol: 'https',
+                hostname: 'assets.st-note.com',
                 port:"",
             },
             {

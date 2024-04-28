@@ -3,7 +3,7 @@
 import React from 'react'
 import BlogCard from './BlogCard';
 import { useState, useEffect } from 'react';
-import { Blog } from '@/types/Type';
+import type { Blog } from '@/types/Type';
 import { getBlogs } from '@/lib/supabaseFunction';
 import { motion } from 'framer-motion';
 
